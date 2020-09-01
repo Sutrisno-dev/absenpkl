@@ -6,8 +6,7 @@
     <title>user</title>
  </head>
  <body>
-  user page
-  para yg tangguh
-  
+  user pagS
+
  </body>
  </html>
