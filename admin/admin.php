@@ -20,18 +20,15 @@
                         echo date('d-m-Y H:i:s');
                      ?>   
                   </li>
-                     <li</li>
-                     <li></li>
-                     <li></li>
-                     <li><a href="lihatabsen.html">Lihat Absen</a></li>
-                     <li><a href="catata.html">Catatan</a></li>
-                     <li><a href="lihatcatatan.html">Lihat Catatan</a></li>
-                     <li><a href="ubahpwd.html">Ubah Password</a></li>
-                     <li><a href="keluar.html">Keluar</a></li>
+                     <li><a href="mahasiswa/tambah_mhs.php">Tambah Mahasiswa</a></li>
+                     <li><a href="mahasiswa/daftar_mhs.php">Daftar Mahasiswa</a></li>
+                     <li><a href="absen.php">Absen</a></li>
+                     <li><a href="lihat_absen.php">Lihat Absen</a></li>
+                     <li><a href="catata.php">Catatan</a></li>
+                     <li><a href="lihat_catatan.php">Lihat Catatan</a></li>
+                     <li><a href="ubah_pwd.php">Ubah Password</a></li>
+                     <li><a href="keluar.php">Keluar</a></li>
                </ul>
-               <h3>><a href="tambahmhs.html">Tambah Mahasiswa</a></h3>
-               <h3><a href="daftarmhs.html">Daftar Mahasiswa</a></h3>
-               <h3><a href="absen.html">Absen</a> </h3>
             </div>
          </div>
          

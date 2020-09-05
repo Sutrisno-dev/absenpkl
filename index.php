@@ -1,42 +1,37 @@
-<!Doctype html>
  <?php
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="absen_pkl";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-echo("connection");
+require 'koneksi.php';
+
 if(isset($_POST['Login'])){
     $user=$_POST['user'];
     $pass=$_POST['pass'];
     $usertype=$_POST['usertype'];
-    $query = "SELECT * FROM `multiuserlogin` WHERE username='".$user."' and password ='".
-    $pass."' and usertype='".$usertype."'";
-    $result = mysqli_query($conn, $query);
-    if($result){
+    $query = "SELECT * FROM users WHERE username = '$user' and password ='$pass' and usertype = '$usertype'";
+    $result = mysqli_query($conn, $query); 
+    if($result->num_rows > 0){
         while($row=mysqli_fetch_array($result)){
             echo'<script type="text/javascript">alert("you are login successfully and you are logined as ' .$row['usertype'].'")</script>';
         }
-        if(mysqli_num_rows($result)>0){
+        if($usertype=="admin"){
             ?>
             <script type="text/javascript">
-            window.location.href="admin.php"</script>
+            window.location.href="admin/admin.php"</script>
             <?php
 
-        }else
+        }else{
             ?>
             <script type="text/javascript">
-            window.location.href="user.php"</script>
+            window.location.href="user/user.php"</script>
             <?php
 
-            
+        } 
     }else{
-        echo 'no result';
+        echo 'username atau password salah!';
 
     
     }
 }
  ?>
+ <!Doctype html>
  <html>
  <head>
     <title>Multi User log in system</title>
