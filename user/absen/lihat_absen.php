@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("../../koneksi.php");
+?>
 <!Doctype html>
 
 <html>
@@ -30,6 +34,43 @@
         </div>
         
      </div>
+     <hr>
+     <h3>Absensiku</h3>
+     <hr>
+     <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Hari, Tanggal</th>
+                <th>Jam Masuk</th>
+                <th>Status</th>
+                <th>Jam Keluar</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+
+                $sql = "SELECT * FROM absen";
+                $query = mysqli_query($conn, $sql);
+
+                while($absen = mysqli_fetch_array($query)){
+                echo "<tr>";
+
+                echo "<td>".$absen['biodata_user_id']."</td>";
+                echo "<td>".$absen['tanggal']."</td>";
+                echo "<td>".$absen['jam_masuk']."</td>";
+                echo "<td>".$absen['konfirmasi_jam_masuk']."</td>";
+                echo "<td>".$absen['jam_keluar']."</td>";
+                echo "<td>".$absen['konfirmasi_jam_keluar']."</td>";
+         
+
+               
+                }
+
+                ?>
+        </tbody>
+     </table>
 
 </body>
 </html>
