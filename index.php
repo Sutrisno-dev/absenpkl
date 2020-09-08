@@ -1,6 +1,6 @@
  <?php
 require 'koneksi.php';
-
+session_start();
 if(isset($_POST['Login'])){
     $user=$_POST['user'];
     $pass=$_POST['pass'];
@@ -10,6 +10,7 @@ if(isset($_POST['Login'])){
     if($result->num_rows > 0){
         while($row=mysqli_fetch_array($result)){
             echo'<script type="text/javascript">alert("you are login successfully and you are logined as ' .$row['usertype'].'")</script>';
+            $_SESSION['id_biodata_user'] = $row['id_user'];
         }
         if($usertype=="admin"){
             ?>
@@ -18,6 +19,7 @@ if(isset($_POST['Login'])){
             <?php
 
         }else{
+            
             ?>
             <script type="text/javascript">
             window.location.href="user/user.php"</script>
