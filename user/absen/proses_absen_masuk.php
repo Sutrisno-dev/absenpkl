@@ -6,7 +6,7 @@
     if(isset($_POST['simpan'])){
 
         //ambil data dari formulir
-        $biodata_user_id = $_POST['biodata_user_id']; 
+        $user_id = $_POST['user_id']; 
         date_default_timezone_set('Asia/Jakarta');
         $tanggal = date('d-m-Y'); 
         $jam_masuk = date('H:i:s'); 
@@ -14,7 +14,7 @@
         
     
         //buat query 
-        $sql = "INSERT INTO absen (biodata_user_id, tanggal, jam_masuk, konfirmasi_jam_masuk ) VALUE ('$biodata_user_id', '$tanggal', '$jam_masuk', '$konfirmasi_jam_masuk')"; 
+        $sql = "INSERT INTO absen (user_id, tanggal, jam_masuk, konfirmasi_jam_masuk ) VALUE ('$user_id', '$tanggal', '$jam_masuk', '$konfirmasi_jam_masuk')"; 
         $query = mysqli_query($conn, $sql);
        
      

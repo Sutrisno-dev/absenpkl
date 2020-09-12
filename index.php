@@ -10,7 +10,7 @@ if(isset($_POST['Login'])){
     if($result->num_rows > 0){
         while($row=mysqli_fetch_array($result)){
             echo'<script type="text/javascript">alert("you are login successfully and you are logined as ' .$row['usertype'].'")</script>';
-            $_SESSION['id_biodata_user'] = $row['id_user'];
+            $_SESSION['id_user'] = $row['id_user'];
         }
         if($usertype=="admin"){
             ?>

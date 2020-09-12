@@ -48,13 +48,13 @@ session_start();
                 <td>Anda belum mengisi absen hari ini</td>
                 <td>
                 <form action="proses_absen_masuk.php" method="post">
-                <input type="hidden" name="biodata_user_id" value="<?= $_SESSION['id_biodata_user'] ?>"> 
+                <input type="hidden" name="user_id" value="<?= $_SESSION['id_user'] ?>"> 
                     <button type="submit" name="simpan">Absen masuk</button>
                 </form>
                 </td>
                 <td>
                 <form action="proses_absen_keluar.php" method="post">
-                <input type="hidden" name="biodata_user_id" value="<?= $_SESSION['id_biodata_user'] ?>"> 
+                <input type="hidden" name="user_id" value="<?= $_SESSION['id_user'] ?>"> 
                     <button type="submit" name="simpan">Absen keluar</button>
                 </td>
             </tr>

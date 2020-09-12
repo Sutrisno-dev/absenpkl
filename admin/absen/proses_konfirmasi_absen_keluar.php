@@ -6,13 +6,11 @@ include("../../koneksi.php");
 if(isset($_POST['simpan'])){
 
    //ambil data dari formulir
-   $user_id = $_POST['user_id'];  
-   date_default_timezone_set('Asia/Jakarta');
-   $jam_keluar = date('H:i:s'); 
-   $konfirmasi_jam_keluar = 'belum dikonfirmasi';  
+   $id_absen = $_POST['id_absen'];     
+   $konfirmasi_jam_keluar = $_POST['konfirmasi_jam_keluar'];     
 
     // buat query update
-    $sql = "UPDATE absen SET jam_keluar='$jam_keluar', konfirmasi_jam_keluar='$konfirmasi_jam_keluar' WHERE user_id=$user_id";
+    $sql = "UPDATE absen SET  konfirmasi_jam_keluar='$konfirmasi_jam_keluar' WHERE id_absen=$id_absen";
     $query = mysqli_query($conn, $sql); 
 
     // apakah query update berhasil?
