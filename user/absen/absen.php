@@ -26,7 +26,6 @@ session_start();
                     <li><a href="lihat_absen.php"> Lihat Absen</a></li>
                     <li><a href="../catatan/tambah_catatan.php">Tambah Catatan</a></li>
                     <li><a href="../catatan/lihat_catatan.php">Lihat Catatan</a></li>
-                    <li><a href="ubah_pwd.php">Ubah Password</a></li>
                     <li><a href="../../index.php">Keluar</a></li>
               </ul>
            </div>
