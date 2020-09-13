@@ -24,12 +24,11 @@
                   </li>
                      <li><a href="tambah_mhs.php">Tambah Mahasiswa</a></li>
                      <li><a href="daftar_mhs.php">Daftar Mahasiswa</a></li>
-                     <li><a href="absen.php">Absen</a></li>
-                     <li><a href="lihat_absen.php">Lihat Absen</a></li>
-                     <li><a href="catata.php">Catatan</a></li>
-                     <li><a href="lihat_catatan.php">Lihat Catatan</a></li>
+                     <li><a href="../absen/absen.php">Absen</a></li>
+                     <li><a href="../absen/lihat_absen.php">Lihat Absen</a></li>
+                     <li><a href="../catatan/lihat_catatan.php">Lihat Catatan</a></li>
                      <li><a href="ubah_pwd.php">Ubah Password</a></li>
-                     <li><a href="keluar.php">Keluar</a></li>
+                     <li><a href=" ../../index.php">Keluar</a></li>
                </ul>
             </div>
          </div>
