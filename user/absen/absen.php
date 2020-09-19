@@ -22,11 +22,10 @@ session_start();
                        echo date('d-m-Y H:i:s');
                     ?>   
                  </li>
-                    <li><a href=" absen.php">Absen</a></li>
-                    <li><a href=" lihat_absen.php">Lihat Absen</a></li>
+                    <li><a href="absen.php">Absen</a></li>
+                    <li><a href="lihat_absen.php"> Lihat Absen</a></li>
                     <li><a href="../catatan/tambah_catatan.php">Tambah Catatan</a></li>
                     <li><a href="../catatan/lihat_catatan.php">Lihat Catatan</a></li>
-                    <li><a href="../password/ubah.php">Ubah Katasandi</a></li>
                     <li><a href="../../index.php">Keluar</a></li>
               </ul>
            </div>

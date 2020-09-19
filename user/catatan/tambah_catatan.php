@@ -26,10 +26,9 @@ session_start();
                      ?>
                     </li>
                     <li><a href="../absen/absen.php">Absen</a></li>
-                    <li><a href="../absen/lihat_absen.php"> Lihat Absen</a></li>
+                    <li><a href="../absen/lihat_absen.php">Lihat Absen</a></li>
                     <li><a href="tambah_catatan.php">Tambah Catatan</a></li>
                     <li><a href="lihat_catatan.php">Lihat Catatan</a></li>
-                    <li><a href="../password/ubah.php">Ubah Kata Sandi</a></li>
                     <li><a href="../../index.php">Keluar</a></li>
                 </ul>
             </div>

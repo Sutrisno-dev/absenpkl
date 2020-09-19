@@ -27,7 +27,7 @@
                     <li><a href="../absen/absen.php">Absen</a></li>
                     <li><a href="../absen/lihat_absen.php">Lihat Absen</a></li>
                     <li><a href="../catatanlihat_catatan.php">Lihat Catatan</a></li>
-                    <li><a href="../password/ubah.php">Ubah Password</a></li>
+                    <li><a href="ubah_pwd.php">Ubah Password</a></li>
                     <li><a href="../../index.php">Keluar</a></li>
                 </ul>
             </div>
@@ -55,15 +55,15 @@
             </p>
             <p>
                 <label for="university">Universitas:</label>
-                <input type="text" name="university" placeholder="asal universitas">
+                <input type="text" name="university" placeholder="universitas">
             </p>
             <p>
                 <label for="username">Username:</label>
-                <input type="text" name="username" placeholder="nama pengguna,@Tris123">
+                <input type="text" name="username" placeholder="username">
             </p>
             <p>
                 <label for="password">Password:</label>
-                <input type="password" name="password" placeholder="**********">
+                <input type="password" name="password" placeholder="kata sandi">
             </p>
             <p>
                 <button type="submit" name="simpan" value="simpan" />Simpan </button>
