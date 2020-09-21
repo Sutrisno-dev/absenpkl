@@ -23,7 +23,7 @@
                      <li><a href="absen/lihat_absen.php"> Lihat Absen</a></li>
                      <li><a href="catatan/tambah_catatan.php">Catatan</a></li>
                      <li><a href="catatan/lihat_catatan.php">Lihat Catatan</a></li>
-                     <li><a href="password/ubah.php">Ubah Kata Sandi</a></li>
+                     <li><a href="password/ubah_pwd.php">Ubah Kata Sandi</a></li>
                      <li><a href="../index.php">Keluar</a></li>
                </ul>
             </div>

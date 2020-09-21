@@ -28,7 +28,7 @@ include("../../koneksi.php");
                   
                     <li><a href="tambah_catatan.php">Tambah Catatan</a></li>
                     <li><a href="lihat_catatan.php">Lihat Catatan</a></li>
-                    <li><a href="../password/ubah.php">Ubah Kata Sandi</a></li>
+                    <li><a href="../password/ubah_pwd.php">Ubah Kata Sandi</a></li>
                     <li><a href="../../index.php">Keluar</a></li>
               </ul>
            </div>
