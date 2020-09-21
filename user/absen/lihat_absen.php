@@ -23,8 +23,7 @@ include("../../koneksi.php");
                        echo date('d-m-Y H:i:s');
                     ?>   
                  </li>
-                    <li><a href=" absen.php">Absen</a></li>
-                    <li><a href=" lihat_absen.php">Lihat Absen</a></li>
+                 
                     <li><a href="absen.php">Absen</a></li>
                     <li><a href="lihat_absen.php"> Lihat Absen</a></li>
                     <li><a href="../catatan/tambah_catatan.php">Tambah Catatan</a></li>
