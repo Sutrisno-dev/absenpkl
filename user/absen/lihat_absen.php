@@ -64,10 +64,7 @@ include("../../koneksi.php");
                 echo "<td>".$absen['jam_masuk']."</td>";
                 echo "<td>".$absen['konfirmasi_jam_masuk']."</td>";
                 echo "<td>".$absen['jam_keluar']."</td>";
-                echo "<td>".$absen['konfirmasi_jam_keluar']."</td>";
-         
-
-               
+                echo "<td>".$absen['konfirmasi_jam_keluar']."</td>";         
                 
                $nomor++;
             }

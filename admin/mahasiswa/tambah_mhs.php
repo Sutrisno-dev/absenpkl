@@ -20,6 +20,8 @@
                         <?php
                         date_default_timezone_set('Asia/Jakarta');
                         echo date('d-m-Y H:i:s');
+
+                        include("../../koneksi.php");
                      ?>
                     </li>
                     <li><a href="tambah_mhs.php">Tambah Mahasiswa</a></li>
@@ -42,28 +44,38 @@
         <fieldset>
             <p>
                 <label for="nim">NIM:</label>
-                <input type="text" name="nim" placeholder="nomor induk mahasiswa">
+                <input type="text" required name="nim" placeholder="nomor induk mahasiswa">
             </p>
             <p>
                 <label for="name">Nama:</label>
-                <input type="text" name="name" placeholder="masukan nama lengkap">
+                <input type="text" required name="name" placeholder="masukan nama lengkap">
             </p>
             <p>
                 <label for="gender">Jenis Kelamin:</label>
-                <label for=""> <input type="radio" name="gender" value="laki-laki">Laki-laki</label>
+                <label for=""> <input type="radio"  name="gender" value="laki-laki">Laki-laki</label>
                 <label for=""><input type="radio" name="gender" value="perempuan">Perempuan</label>
             </p>
             <p>
                 <label for="university">Universitas:</label>
-                <input type="text" name="university" placeholder="universitas">
+                <?php 
+                    $sql = "SELECT id, universitas FROM universitas";
+                    $query = mysqli_query($conn, $sql);                                        
+                ?>
+                <select name="university" id="universitas" required>
+                    <option value="">Pilih Universitas</option>
+                    <?php
+                        while($univ = mysqli_fetch_assoc($query)): ?>
+                        <option value="<?= $univ['id'] ?>"><?= $univ['universitas'] ?></option>                    
+                    <?php endwhile; ?>  
+                </select>                
             </p>
             <p>
                 <label for="username">Username:</label>
-                <input type="text" name="username" placeholder="username">
+                <input type="text" name="username" placeholder="username" required>
             </p>
             <p>
                 <label for="password">Password:</label>
-                <input type="password" name="password" placeholder="kata sandi">
+                <input type="password" name="password" placeholder="kata sandi" required>
             </p>
             <p>
                 <button type="submit" name="simpan" value="simpan" />Simpan </button>

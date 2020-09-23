@@ -22,7 +22,7 @@ if( isset($_GET['id_biodata_user']) ){
 
     // apakah query hapus berhasil?
     if( $query ){
-        header('Location: ../admin.php');
+        header('Location: daftar_mhs.php');
     } else {
         die("gagal menghapus...");
     }

@@ -5,6 +5,7 @@ include("../../koneksi.php");
 // cek apakah tombol simpan sudah diklik atau blum?
 if(isset($_POST['simpan'])){
 
+    
     // ambil data dari formulir
     $id_biodata_user = $_POST['id_biodata_user'];
     $nim = $_POST['nim'];
@@ -22,7 +23,7 @@ if(isset($_POST['simpan'])){
     // apakah query update berhasil?
     if( $query ) {
         // kalau berhasil alihkan ke halaman list-siswa.php
-        header('Location: ../admin.php');
+        header('Location: daftar_mhs.php');
     } else {
         // kalau gagal tampilkan pesan
         die("Gagal menyimpan perubahan...");

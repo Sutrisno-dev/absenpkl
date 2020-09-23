@@ -48,19 +48,20 @@
                 <tbody>
                 <?php
 
-                     $sql = "SELECT * FROM biodata_users";
+                     $sql = "SELECT id_biodata_user,nim, name, gender, u.universitas FROM biodata_users JOIN universitas u ON 
+                     biodata_users.university = u.id";
                      $query = mysqli_query($conn, $sql);
-
+                     
+                     $no = 1;
                      while($mhs = mysqli_fetch_array($query)){
                         echo "<tr>";
 
-                        echo "<td>".$mhs['id_biodata_user']."</td>";
+                        echo "<td>".$no++."</td>";
                         echo "<td>".$mhs['nim']."</td>";
                         echo "<td>".$mhs['name']."</td>";
-                        echo "<td>".$mhs['university']."</td>";
-                        echo "<td>".$mhs['gender']."</td>";
-                       
-
+                        echo "<td>".$mhs['universitas']."</td>";
+                        if($mhs['gender'] == 'L') echo "<td>Laki-Laki</td>";
+                        else echo "<td>Perempuan</td>";                       
                         echo "<td>";
                         echo "<a href='ubah_mhs.php?id_biodata_user=".$mhs['id_biodata_user']."'>Edit</a> | ";
                         echo "<a href='hapus_mhs.php?id_biodata_user=".$mhs['id_biodata_user']."'>Hapus</a>";

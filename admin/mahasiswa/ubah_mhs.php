@@ -11,9 +11,11 @@ if( !isset($_GET['id_biodata_user']) ){
 $id_biodata_user = $_GET['id_biodata_user'];
 
 // buat query untuk ambil data dari database
-$sql = "SELECT * FROM biodata_users INNER JOIN users ON biodata_users.user_id = users.id_user WHERE id_biodata_user=$id_biodata_user";
+$sql = "SELECT biodata_users.*, users.*, u.* FROM biodata_users JOIN users ON biodata_users.user_id = users.id_user 
+        JOIN universitas u ON biodata_users.university = u.id WHERE id_biodata_user = $id_biodata_user";
 $query = mysqli_query($conn, $sql);
 $mhs = mysqli_fetch_assoc($query);
+
 
 // jika data yang di-edit tidak ditemukan
 if( mysqli_num_rows($query) < 1 ){
@@ -62,7 +64,7 @@ if( mysqli_num_rows($query) < 1 ){
     <header>
         <h3>Formulir Pendaftaran Siswa Baru</h3>
     </header>
-
+    <a href="daftar_mhs.php">Kembali</a>
     <form action="prosesUbah_mhs.php" method="POST">
         <input type="hidden" name="id_biodata_user" value="<?php echo $mhs['id_biodata_user'] ?>" />
         <fieldset>
@@ -77,14 +79,26 @@ if( mysqli_num_rows($query) < 1 ){
             <p>
                 <label for="gender">Jenis Kelamin:</label>
                 <?php $gender = $mhs['gender']; ?>
-                <label for=""> <input type="radio" name="gender" value="laki-laki"
-                        <?php echo ($gender == 'laki-laki') ? "checked": "" ?>>>laki-laki</label>
-                <label for=""><input type="radio" name="gender" value="perempuan"
-                        <?php echo ($gender == 'perempuan') ? "checked": "" ?>>perempuan</label>
+                <label for=""> <input type="radio" name="gender" value="L"
+                        <?php echo ($gender == 'L') ? "checked": "" ?>>Laki-Laki</label>
+                <label for=""><input type="radio" name="gender" value="P"
+                        <?php echo ($gender == 'P') ? "checked": "" ?>>perempuan</label>
             </p>
             <p>
                 <label for="university">Universitas:</label>
-                <input type="text" name="university" placeholder="universitas" value="<?php echo $mhs['university'] ?>">
+                <?php 
+                    $sql = "SELECT id, universitas FROM universitas";
+                    $query = mysqli_query($conn, $sql);                                        
+                ?>
+                <select name="university" id="universitas" required>
+                    <option value="">Pilih Universitas</option>
+                    <?php
+                        while($univ = mysqli_fetch_assoc($query)): ?>
+                        <option value="<?= $univ['id'] ?>" 
+                        <?php if($mhs['id'] == $univ['id']) echo "selected"; ?>
+                        ><?= $univ['universitas'] ?></option>                    
+                    <?php endwhile; ?>  
+                </select>                
             </p>
             <p>
                 <label for="username">Username:</label>

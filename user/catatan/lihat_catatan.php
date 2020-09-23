@@ -23,7 +23,7 @@ include("../../koneksi.php");
                        echo date('d-m-Y H:i:s');
                     ?>   
                  </li>
-                 <li><a href="../absen/absen.php">Absen</a></li>
+                     <li><a href="../absen/absen.php">Absen</a></li>
                     <li><a href="../absen/lihat_absen.php"> Lihat Absen</a></li>
                   
                     <li><a href="tambah_catatan.php">Tambah Catatan</a></li>
@@ -32,8 +32,7 @@ include("../../koneksi.php");
                     <li><a href="../../index.php">Keluar</a></li>
               </ul>
            </div>
-        </div>
-        
+        </div>        
      </div>
      <hr>
      <h3>Catatan Kegiatan Mahasiswa PKL</h3>
